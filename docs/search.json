@@ -9,8 +9,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "karolinasienko.github.io",
+    "title": "Karolina Sienko",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This is where my bio will go!"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "All my favorite resources!",
+    "section": "",
+    "text": "Hi there!"
   }
 ]

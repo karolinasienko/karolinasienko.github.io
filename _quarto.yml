@@ -1,23 +1,24 @@
 project:
   type: website
   output-dir: docs
-  
+
 
 website:
-  title: "karolinasienko.github.io"
+  title: "Karolina Sienko"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: resources.qmd
+        text: Resources
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: minty
     css: styles.css
     toc: true
+    page-layout: full
 
 
 

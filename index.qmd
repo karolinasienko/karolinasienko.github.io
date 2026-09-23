@@ -1,7 +1,20 @@
 ---
-title: "karolinasienko.github.io"
+title: "Karolina Sienko"
+image: "images/headshot.jpg"
+toc: false
+about:
+    template: trestles
+    image-shape: rectangle
+    image-width: 17em
+    links:
+        - text: LinkedIn
+          href: https://www.linkedin.com/in/karolina-sienko/
+          target: _blank
+        - text: Email
+          href: mailto:karolina.e.sienko@gmail.com
+        - text: GitHub
+          href: https://github.com/karolinasienko
+          target: _blank
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is where my bio will go!
