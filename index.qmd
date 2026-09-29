@@ -7,14 +7,19 @@ about:
     image-shape: rectangle
     image-width: 17em
     links:
-        - text: LinkedIn
+        - icon: linkedin
+          text: LinkedIn
           href: https://www.linkedin.com/in/karolina-sienko/
           target: _blank
-        - text: Email
+        - icon: envelope
+          text: Email
           href: mailto:karolina.e.sienko@gmail.com
-        - text: GitHub
+        - icon: github
+          text: GitHub
           href: https://github.com/karolinasienko
           target: _blank
+        - icon: file-text
+          text: Resume
 ---
 
 This is where my bio will go!
