@@ -20,6 +20,8 @@ about:
           target: _blank
         - icon: file-text
           text: Resume
+          href: https://karolinasienko.github.io/files/KarolinaSienko_MEDS_Resume_Sep2026.pdf
+          target: _blank
 ---
 
 This is where my bio will go!
