@@ -1,6 +1,6 @@
 ---
 title: "Karolina Sienko"
-image: "images/headshot.jpg"
+image: "images/website_headhost.jpg"
 toc: false
 about:
     template: trestles
