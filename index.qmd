@@ -7,12 +7,12 @@ about:
     image-shape: rectangle
     image-width: 17em
     links:
-        - text: LinkedIn
+        - text: <i class="fa-brands fa-linkedin"></i> LinkedIn
           href: https://www.linkedin.com/in/karolina-sienko/
           target: _blank
-        - text: Email
+        - text: <i class="fa-solid fa-envelope"></i> Email
           href: mailto:karolina.e.sienko@gmail.com
-        - text: GitHub
+        - text: <i class="fa-brands fa-github"></i> GitHub
           href: https://github.com/karolinasienko
           target: _blank
 ---

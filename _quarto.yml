@@ -6,7 +6,7 @@ project:
 website:
   title: "Karolina Sienko"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
@@ -15,10 +15,7 @@ website:
 
 format:
   html:
-    theme: 
-      light: minty
-      dark: solar
-    css: styles.css
+    theme: styles.scss
     toc: true
     page-layout: full
 
