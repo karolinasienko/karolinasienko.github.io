@@ -1,19 +1,26 @@
 ---
 title: "Karolina Sienko"
-image: "images/headshot.jpg"
+image: "images/website_headhost.jpg"
 toc: false
 about:
     template: trestles
     image-shape: rectangle
     image-width: 17em
     links:
-        - text: <i class="fa-brands fa-linkedin"></i> LinkedIn
+        - icon: linkedin
+          text: LinkedIn
           href: https://www.linkedin.com/in/karolina-sienko/
           target: _blank
-        - text: <i class="fa-solid fa-envelope"></i> Email
+        - icon: envelope
+          text: Email
           href: mailto:karolina.e.sienko@gmail.com
-        - text: <i class="fa-brands fa-github"></i> GitHub
+        - icon: github
+          text: GitHub
           href: https://github.com/karolinasienko
+          target: _blank
+        - icon: file-text
+          text: Resume
+          href: https://karolinasienko.github.io/files/KarolinaSienko_MEDS_Resume_Sep2026.pdf
           target: _blank
 ---
 
