@@ -1,0 +1,29 @@
+/*-- scss:defaults --*/
+
+// Colors (define your palette)
+$dark-green: #798667;
+$darker-green: #4d5542;
+$light-green: #aec09f;
+$olive-green: #a7a65f;
+$cream: #f8f4ec;
+$cream2: #FEFBEA;
+$grey: #504847;
+$blue: #7292ba;
+$brown: #7d6145;
+$granite: #92898A;
+$deep-teal: #5F7470;
+$dusty-taupe: #96897b;
+$stone-brown: #4a3f32;
+$dark-brown: #3a3228;
+
+
+// Assign to Quarto Sass variables
+$navbar-bg: $olive-green;        // navbar background
+$navbar-fg: $stone-brown;   // navbar text/icons
+$navbar-hl: $darker-green;       // navbar hover highlight
+$body-bg: $cream;    // page background
+$body-color: $dark-brown;        // page text
+$footer-bg: $light-green;        // footer background
+$link-color: $dark-green;      // hyperlinks
+$code-bg: $cream;          // inline code background
+$code-color: $deep-teal;      // inline code text
