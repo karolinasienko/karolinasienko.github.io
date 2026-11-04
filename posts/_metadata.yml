@@ -1,0 +1,12 @@
+# re render posts only when source changes
+freeze: auto
+
+# banner style title blocks
+title-block-banner: true
+
+# author info applied to all posts
+author:
+    - name: Karolina Sienko
+      url: https://karolinasienko.github.io
+      affiliation: Master of Environmental Data Science Program @ The Bren School
+      affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science

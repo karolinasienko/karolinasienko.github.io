@@ -24,4 +24,4 @@ about:
           target: _blank
 ---
 
-This is where my bio will go!
+My name is Karolina Sienko and I’m currently a student in the Master of Environmental Data Science Program at UCSB’s Bren School of Environmental Science & Management.

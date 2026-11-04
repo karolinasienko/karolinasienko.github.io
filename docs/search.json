@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Karolina Sienko",
     "section": "",
-    "text": "This is where my bio will go!"
+    "text": "My name is Karolina Sienko and I’m currently a student in the Master of Environmental Data Science Program at UCSB’s Bren School of Environmental Science & Management."
   },
   {
     "objectID": "resources.html",
@@ -19,5 +19,40 @@
     "title": "All my favorite resources!",
     "section": "",
     "text": "Hi there!"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
+    "section": "",
+    "text": "My first blog post!\n\n\n\nQuarto\n\nR\n\nMEDS\n\nGeospatial\n\n\n\nA short description that appears on the listing page\n\n\n\nKarolina Sienko\n\n\nNov 4, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2026-11-04-test-blog/index.html",
+    "href": "posts/2026-11-04-test-blog/index.html",
+    "title": "My first blog post!",
+    "section": "",
+    "text": "Here is where my blog post content begins…"
+  },
+  {
+    "objectID": "posts/2026-11-04-test-blog/index.html#section",
+    "href": "posts/2026-11-04-test-blog/index.html#section",
+    "title": "My first blog post!",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/2026-11-04-test-blog/index.html#footnotes",
+    "href": "posts/2026-11-04-test-blog/index.html#footnotes",
+    "title": "My first blog post!",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHere is the associated footnote text.↩︎\nHere is my inline footnote↩︎"
+  },
+  {
+    "objectID": "posts/2026-11-04-test-blog/index.html#method-2---inline",
+    "href": "posts/2026-11-04-test-blog/index.html#method-2---inline",
+    "title": "My first blog post!",
+    "section": "Method 2 - Inline",
+    "text": "Method 2 - Inline\nI am going to insert an inline footnote here2.\n\n1 + 1\n\n[1] 2"
   }
 ]

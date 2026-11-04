@@ -5,6 +5,7 @@ $dark-green: #798667;
 $darker-green: #4d5542;
 $light-green: #aec09f;
 $olive-green: #a7a65f;
+$dark-olive-green: #83824a;
 $cream: #f8f4ec;
 $cream2: #FEFBEA;
 $grey: #504847;
@@ -19,11 +20,18 @@ $dark-brown: #3a3228;
 
 // Assign to Quarto Sass variables
 $navbar-bg: $olive-green;        // navbar background
-$navbar-fg: $stone-brown;   // navbar text/icons
+$navbar-fg: $cream;   // navbar text/icons
 $navbar-hl: $darker-green;       // navbar hover highlight
 $body-bg: $cream;    // page background
 $body-color: $dark-brown;        // page text
 $footer-bg: $light-green;        // footer background
-$link-color: $dark-green;      // hyperlinks
+$link-color: $dark-olive-green;      // hyperlinks
 $code-bg: $cream;          // inline code background
-$code-color: $deep-teal;      // inline code text
+$code-color: $olive-green;      // inline code text
+
+
+
+
+/*-- scss:rules --*/
+
+/* Write your CSS rules below here */
