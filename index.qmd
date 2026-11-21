@@ -24,4 +24,10 @@ about:
           target: _blank
 ---
 
-My name is Karolina Sienko and I’m currently a student in the Master of Environmental Data Science Program at UCSB’s Bren School of Environmental Science & Management.
+## Hi! Welcome to my website!
+
+My name is Karolina Sienko and I’m currently a master's student in the Environmental Data Science Program at the Bren School of Environmental Science & Management at UC Santa Barbara.
+
+I have a background in physics and mathematics, and now I'm exploring how I can apply my quantitative and coding skills to environmental questions. I'm excited to use data to better understand environmental systems and the challenges facing our planet. 
+
+This site is where I share my coursework, projects, and things I've been working on as I learn more about environmental data science!
