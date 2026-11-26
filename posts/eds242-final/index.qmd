@@ -6,7 +6,7 @@ categories: [Quarto, R, MEDS, Environmental Justice]
 bibliography: references.bib
 citation:
     url: https://karolinasienko.github.io/posts/2026-11-17-eds242-final/
-image: images/air-pollution.jpg
+image: ../../images/air-pollution.jpg
 ---
 
 ### Introduction
