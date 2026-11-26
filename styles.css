@@ -1,1 +1,11 @@
 /* css styles */
+
+#refs div.csl-entry {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+figcaption {
+  text-align: center;
+}
