@@ -5,6 +5,7 @@ project:
 
 website:
   title: "Karolina Sienko"
+  site-url: "https://karolinasienko.github.io"
   navbar:
     right:
       - href: index.qmd
