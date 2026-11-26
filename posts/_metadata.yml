@@ -8,5 +8,14 @@ title-block-banner: true
 author:
     - name: Karolina Sienko
       url: https://karolinasienko.github.io
-      affiliation: Master of Environmental Data Science Program @ The Bren School
+      affiliation: Master of Environmental Data Science Program at the Bren School
       affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science
+
+format:
+  html:
+    toc: true
+
+execute:
+  echo: true
+  warning: false
+  message: false

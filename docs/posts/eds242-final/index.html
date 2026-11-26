@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Karolina Sienko">
+<meta name="dcterms.date" content="2026-11-26">
+<meta name="description" content="Air quality monitoring gaps and bias, and their implications for environmental justice">
+
+<title>The Hidden Biases in U.S. Air Quality Monitoring – Karolina Sienko</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2a06abbf2f74c4835d9276cb89cabbed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Karolina Sienko</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">The Hidden Biases in U.S. Air Quality Monitoring</h1>
+                  <div>
+        <div class="description">
+          Air quality monitoring gaps and bias, and their implications for environmental justice
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Quarto</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">MEDS</div>
+                <div class="quarto-category">Environmental Justice</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author column-page-left">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://karolinasienko.github.io">Karolina Sienko</a> </p>
+    </div>
+    <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science">
+              Master of Environmental Data Science Program at the Bren School
+              </a>
+            </p>
+        </div>
+    </div>
+
+  <div class="quarto-title-meta column-page-left">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 26, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-case-study" id="toc-the-case-study" class="nav-link" data-scroll-target="#the-case-study">The Case Study</a></li>
+  <li><a href="#application-of-class-material" id="toc-application-of-class-material" class="nav-link" data-scroll-target="#application-of-class-material">Application of Class Material</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>In late October of 1948, a thick smog engulfed Donora, Pennsylvania and its neighboring town Webster. Within the span of a few days, 20 people were dead and hundreds more ended up in hospitals, complaining of breathing difficulty <span class="citation" data-cites="boissoneault2018">(<a href="#ref-boissoneault2018" role="doc-biblioref">Boissoneault 2018</a>)</span>.</p>
+<p>The disaster, caused by industrial emissions from U.S. Steel factories, brought national attention to the public health impacts of air pollution and the need for stronger regulation. In 1970, the EPA was formed and Congress passed the Clean Air Act, the primary federal law in the United States that regulates air emissions. It requires the EPA to set National Ambient Air Quality Standards (NAAQS) for six common pollutants, including fine particulate matter (PM2.5), which consists of particles 2.5 micrometers or smaller in diameter <span class="citation" data-cites="epa_cleanairact">(<a href="#ref-epa_cleanairact" role="doc-biblioref">U.S. Environmental Protection Agency, n.d.</a>)</span>.</p>
+<p>The Clean Air Act provides the foundation for the EPA’s ambient air monitoring network, which uses outdoor monitors to track air quality nationally and enforces the NAAQS.</p>
+</section>
+<section id="the-case-study" class="level3">
+<h3 class="anchored" data-anchor-id="the-case-study">The Case Study</h3>
+<p>On paper, the U.S. air quality monitoring network is an adequate system built to protect public health. In practice, though, it only captures part of the picture. Of the approximately 3,100 counties in the United States, 1,848 lack an air quality monitor, leaving about 40% of the country unmonitored. An estimated 50 million Americans (15.3% of the population) live in these “air quality monitoring deserts”, shown in white in the map below, which are more common in rural and predominantly minority communities <span class="citation" data-cites="roque2025">(<a href="#ref-roque2025" role="doc-biblioref">Roque et al. 2025</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/monitoring_desert_map.jpg" class="img-fluid figure-img" style="width:70.0%" alt="Map of air quality monitoring deserts across the United States"></p>
+<figcaption>County-level presence of a monitoring site. Counties with an active monitoring site in 2024 are in green, while those classified as monitoring deserts are in white. <span class="citation" data-cites="roque2025">(<a href="#ref-roque2025" role="doc-biblioref">Roque et al. 2025</a>)</span></figcaption>
+</figure>
+</div>
+<p>Low-cost sensor networks, like PurpleAir, have helped supplement the spatial gaps in the EPA’s regulatory monitoring network. However, it’s important to note that these improvements benefit certain demographic and socioeconomic groups of people.</p>
+<p>Networks such as PurpleAir were found to be concentrated in whiter, wealthier, and more educated neighborhoods <span class="citation" data-cites="desouza2021">(<a href="#ref-desouza2021" role="doc-biblioref"><span class="nocase">deSouza and Kinney</span> 2021</a>)</span>. This is particularly concerning considering that predominantly Black, Asian, and Hispanic/Latino communities experienced higher average PM2.5 concentrations than predominantly White and Native American communities between 2004 and 2016. Lower-income communities also experienced higher average PM2.5 levels compared to higher-income communities <span class="citation" data-cites="jbaily2022">(<a href="#ref-jbaily2022" role="doc-biblioref">Jbaily et al. 2022</a>)</span>.</p>
+<p>Monitor placement may also contribute to these disparities. <span class="citation" data-cites="desouza2021"><span class="nocase">deSouza and Kinney</span> (<a href="#ref-desouza2021" role="doc-biblioref">2021</a>)</span> found that socioeconomic and demographic factors influence the placement of these air quality monitors. Regulators tended to avoid placing monitors in pollution hotposts, unless the area was within a higher-income and predominantly White community. This could mean that pollution in marginalized communities is less likely to be directly measured and documented.</p>
+<p>This creates a gap between where pollution is worst and where it’s measured – the communities suffering from the dirtiest air are typically the ones with the least data to prove it, and the lack of data makes it difficult to enforce health standards and push for regulation changes. The aforementioned gaps in coverage can widen these inequalities by limiting certain communities’ ability to respond to the air pollution they face.</p>
+</section>
+<section id="application-of-class-material" class="level3">
+<h3 class="anchored" data-anchor-id="application-of-class-material">Application of Class Material</h3>
+<p>This case demonstrates several types of biases we studied in class:</p>
+<ul>
+<li><p><strong>Sampling bias – unequal representation in spatial coverage</strong> <span class="citation" data-cites="konno2024">(<a href="#ref-konno2024" role="doc-biblioref">Konno et al. 2024</a>)</span><br>
+The overarching bias of this case study is sampling bias, specifically spatial coverage bias. EPA regulatory monitors and PurpleAir sensors are unevenly distributed across geographic areas and demographic groups. As a result, communities without nearby monitors are less directly represented in air quality data. Fewer monitors don’t necessarily mean lower estimated pollution, but rather less observational evidence and potentially greater uncertainty of local air quality.</p></li>
+<li><p><strong>Selection bias – deciding where monitors are placed</strong> <span class="citation" data-cites="konno2024">(<a href="#ref-konno2024" role="doc-biblioref">Konno et al. 2024</a>)</span><br>
+Monitor locations are not randomly selected but are influenced by regulatory requirements and local decisions. <span class="citation" data-cites="grainger2019">Grainger and Schreiber (<a href="#ref-grainger2019" role="doc-biblioref">2019</a>)</span> found evidence that local regulators may avoid placing monitors in pollution hotspots, favoring cleaner parts of counties instead. Similarly, <span class="citation" data-cites="desouza2021"><span class="nocase">deSouza and Kinney</span> (<a href="#ref-desouza2021" role="doc-biblioref">2021</a>)</span> found that monitors were more likely to be placed in high-pollution areas of wealthier or whiter communities. These patterns can make pollution in some communities more visible to regulators, leaving others underrepresented.</p></li>
+<li><p><strong>Measurement bias – in low-cost sensors</strong> <span class="citation" data-cites="konno2024">(<a href="#ref-konno2024" role="doc-biblioref">Konno et al. 2024</a>)</span><br>
+PurpleAir sensors were found to overestimate PM2.5 concentrations in humid and smoky conditions unless corrected <span class="citation" data-cites="barkjohn2021">(<a href="#ref-barkjohn2021" role="doc-biblioref">Barkjohn et al. 2021</a>)</span>. Thus, even when monitoring stations are present, their measurements may not accurately reflect actual pollution levels. These measurement errors can introduce uncertainties into pollution estimates. When combining different monitoring technologies, researchers need to account for differences in accuracy and reliability.</p></li>
+</ul>
+<p>All three biases affect the earliest stage of the air quality monitoring process: data collection.</p>
+<p>In “Why Data Is Never Raw”, <span class="citation" data-cites="barrowman2018">Barrowman (<a href="#ref-barrowman2018" role="doc-biblioref">2018</a>)</span> emphasizes that how data are collected limits the conclusions researchers can draw. The unequal distribution of air quality monitors across the U.S. directly relates to this concept: where are these monitors placed, and why? The decisions about where monitors are placed determine which communities are represented in environmental datasets and whose pollution exposure is underobserved.</p>
+<p>For example, if a rural, low-income community has no nearby air quality monitors, researchers estimating pollution exposure may have to rely on measurements from a distant location or modeled estimates. The community’s actual exposure to pollution may be falsely reflected, resulting in an inaccurate representation of air quality across populations.</p>
+<p>This also connects to the discussion of environmental justice and the inequalities in environmental policies and data in <span class="citation" data-cites="vera2019">Vera et al. (<a href="#ref-vera2019" role="doc-biblioref">2019</a>)</span>. Marginalized communities often experience disproportionate exposure to environmental problems while having less access to the monitoring network needed to document said exposure. This raises an important ethical concern that communities experiencing environmental inequalities may also be less visible in the data used to assess them. Improving environmental data requires addressing not only the quality of the measurement, but also the underlying bias that influences data collection.</p>
+</section>
+<section id="solutions" class="level3">
+<h3 class="anchored" data-anchor-id="solutions">Solutions</h3>
+<p>Some strategies to mitigate these biases in air quality monitoring in the U.S. include:</p>
+<ul>
+<li><p><strong>Equity-informed placement of monitoring stations.</strong> Regulators could conduct a nationwide assessment to determine which communities are in need of more accurate air quality monitoring, regardless of their socioeconomic or demographic status, by combining spatial analysis with pollution estimates and environmental justice indicators.</p></li>
+<li><p><strong>Community-led environmental modeling.</strong> Community members have firsthand knowledge of where air quality may be a concern. Involving residents, schools, and local organizations in the decision of where to place air monitors can help bridge gaps in the monitoring networks.</p></li>
+<li><p><strong>Consistent quality control and routine maintenance.</strong> Expanding monitoring coverage is only useful if the resulting measurements are reliable. Regulation enforcement agencies and the people responsible for the low-cost monitors should establish procedures for routine maintenance, including calibration and correction of measurements.</p></li>
+</ul>
+<p>A few best practices for addressing similar biases:</p>
+<ul>
+<li><p>Identify geographic areas and demographic groups that are underrepresented in environmental datasets.</p></li>
+<li><p>Utilize representative sampling designs by making sure data collection accounts for geographic, socioeconomic, and demographic diversity.</p></li>
+<li><p>Document data limitations. It’s impossible to collect perfect, unbiased data, and therefore important to clearly report any missing observations, sampling decisions, uncertainties, and potential sources of bias.</p></li>
+</ul>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-barkjohn2021" class="csl-entry" role="listitem">
+Barkjohn, Karoline K., Brett Gantt, and Andrea L. Clements. 2021. <span>“Development and Application of a United States-Wide Correction for <span>PM2.5</span> Data Collected with the <span>PurpleAir</span> Sensor.”</span> <em>Atmospheric Measurement Techniques</em> 14: 4617–37. <a href="https://doi.org/10.5194/amt-14-4617-2021">https://doi.org/10.5194/amt-14-4617-2021</a>.
+</div>
+<div id="ref-barrowman2018" class="csl-entry" role="listitem">
+Barrowman, Nick. 2018. <span>“Why Data Is Never Raw.”</span> <em>The New Atlantis</em>, no. 56: 129–35. <a href="https://www.thenewatlantis.com/publications/why-data-is-never-raw">https://www.thenewatlantis.com/publications/why-data-is-never-raw</a>.
+</div>
+<div id="ref-boissoneault2018" class="csl-entry" role="listitem">
+Boissoneault, Lorraine. 2018. <span>“The Deadly <span>Donora</span> Smog of 1948 Spurred Environmental Protection—but Have We Forgotten the Lesson?”</span> <em>Smithsonian Magazine</em>. <a href="https://www.smithsonianmag.com/history/deadly-donora-smog-1948-spurred-environmental-protection-have-we-forgotten-lesson-180970533/">https://www.smithsonianmag.com/history/deadly-donora-smog-1948-spurred-environmental-protection-have-we-forgotten-lesson-180970533/</a>.
+</div>
+<div id="ref-desouza2021" class="csl-entry" role="listitem">
+<span class="nocase">deSouza, Priscilla, and Patrick L. Kinney</span>. 2021. <span>“On the Distribution of Low-Cost <span>PM2.5</span> Sensors in the <span>US</span>: Demographic and Air Quality Associations.”</span> <em>Journal of Exposure Science &amp; Environmental Epidemiology</em> 31 (3): 514–24. <a href="https://doi.org/10.1038/s41370-021-00328-2">https://doi.org/10.1038/s41370-021-00328-2</a>.
+</div>
+<div id="ref-grainger2019" class="csl-entry" role="listitem">
+Grainger, Corbett, and Andrea Schreiber. 2019. <span>“Discrimination in Ambient Air Pollution Monitoring?”</span> <em>AEA Papers and Proceedings</em> 109: 277–82. <a href="https://doi.org/10.1257/pandp.20191063">https://doi.org/10.1257/pandp.20191063</a>.
+</div>
+<div id="ref-jbaily2022" class="csl-entry" role="listitem">
+Jbaily, Ahmad, Xun Zhou, Jian Liu, et al. 2022. <span>“Air Pollution Exposure Disparities Across <span>US</span> Population and Income Groups.”</span> <em>Nature</em> 601 (7892): 228–33. <a href="https://doi.org/10.1038/s41586-021-04190-y">https://doi.org/10.1038/s41586-021-04190-y</a>.
+</div>
+<div id="ref-konno2024" class="csl-entry" role="listitem">
+Konno, K., J. Gibbons, R. Lewis, and A. S. Pullin. 2024. <span>“Potential Types of Bias When Estimating Causal Effects in Environmental Research and How to Interpret Them.”</span> <em>Environmental Evidence</em> 13 (1): 1. <a href="https://doi.org/10.1186/s13750-024-00324-7">https://doi.org/10.1186/s13750-024-00324-7</a>.
+</div>
+<div id="ref-roque2025" class="csl-entry" role="listitem">
+Roque, N. A., H. Andrews, and A. R. Santos-Lozada. 2025. <span>“Identifying Air Quality Monitoring Deserts in the <span>United States</span>.”</span> <em>Proceedings of the National Academy of Sciences</em> 122 (17): e2425310122. <a href="https://doi.org/10.1073/pnas.2425310122">https://doi.org/10.1073/pnas.2425310122</a>.
+</div>
+<div id="ref-epa_cleanairact" class="csl-entry" role="listitem">
+U.S. Environmental Protection Agency. n.d. <em>Summary of the Clean Air Act</em>. <a href="https://www.epa.gov/laws-regulations/summary-clean-air-act">https://www.epa.gov/laws-regulations/summary-clean-air-act</a>.
+</div>
+<div id="ref-vera2019" class="csl-entry" role="listitem">
+Vera, L. A., D. Walker, M. Murphy, et al. 2019. <span>“When Data Justice and Environmental Justice Meet: Formulating a Response to Extractive Logic Through Environmental Data Justice.”</span> <em>Information, Communication &amp; Society</em> 22 (7): 1012–28. <a href="https://doi.org/10.1080/1369118X.2019.1596293">https://doi.org/10.1080/1369118X.2019.1596293</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{sienko2026,
+  author = {Sienko, Karolina},
+  title = {The {Hidden} {Biases} in {U.S.} {Air} {Quality} {Monitoring}},
+  date = {2026-11-26},
+  url = {https://karolinasienko.github.io/posts/2026-11-17-eds242-final/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-sienko2026" class="csl-entry quarto-appendix-citeas" role="listitem">
+Sienko, Karolina. 2026. <span>“The Hidden Biases in U.S. Air Quality
+Monitoring.”</span> November 26. <a href="https://karolinasienko.github.io/posts/2026-11-17-eds242-final/">https://karolinasienko.github.io/posts/2026-11-17-eds242-final/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
