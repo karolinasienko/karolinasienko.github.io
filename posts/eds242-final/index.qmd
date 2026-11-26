@@ -13,6 +13,8 @@ image: /images/air-pollution.jpg
 
 In late October of 1948, a thick smog engulfed Donora, Pennsylvania and its neighboring town Webster. Within the span of a few days, 20 people were dead and hundreds more ended up in hospitals, complaining of breathing difficulty [@boissoneault2018].
 
+![The 1948 Donora smog. [@natgeo2024donora]](../../images/donora-smog.avif){fig-alt="Photo of Donora smog" width="70%"}
+
 The disaster, caused by industrial emissions from U.S. Steel factories, brought national attention to the public health impacts of air pollution and the need for stronger regulation. In 1970, the EPA was formed and Congress passed the Clean Air Act, the primary federal law in the United States that regulates air emissions. It requires the EPA to set National Ambient Air Quality Standards (NAAQS) for six common pollutants, including fine particulate matter (PM2.5), which consists of particles 2.5 micrometers or smaller in diameter [@epa_cleanairact].
 
 The Clean Air Act provides the foundation for the EPA’s ambient air monitoring network, which uses outdoor monitors to track air quality nationally and enforces the NAAQS. 
